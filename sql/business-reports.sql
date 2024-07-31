@@ -1,6 +1,6 @@
 -- View 1: Customer Order Summary
 -- This view provides a summary of orders placed by each customer, including total order count and total amount spent.
-CREATE VIEW CustomerOrderSummary AS
+CREATE VIEW MS_CustomerOrderSummary AS
 SELECT 
     c.CustomerID,
     c.Username,
@@ -18,7 +18,7 @@ GROUP BY
 
 -- View 2: Product Sales Summary
 -- This view provides a summary of sales for each product, including the total quantity sold and total revenue generated.
-CREATE VIEW ProductSalesSummary AS
+CREATE VIEW MS_ProductSalesSummary AS
 SELECT 
     p.ProductID,
     p.ProductName,
@@ -33,7 +33,7 @@ GROUP BY
 
 -- View 3: Inventory Status
 -- This view provides the current status of the inventory, including stock levels for each product.
-CREATE VIEW InventoryStatus AS
+CREATE VIEW MS_InventoryStatus AS
 SELECT 
     i.ProductID,
     p.ProductName,
@@ -44,7 +44,7 @@ FROM
 
 -- View 4: Payment Summary
 -- This view provides a summary of payments made, including total payment amount by each customer.
-CREATE VIEW PaymentSummary AS
+CREATE VIEW MS_PaymentSummary AS
 SELECT 
     p.CustomerID,
     c.Username,
