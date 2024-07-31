@@ -35,8 +35,8 @@ CREATE TABLE MS_Inventory (
     StockNumber NUMBER(6) NOT NULL,
     ProductID NUMBER(6) NOT NULL,
     AdministratorID NUMBER(6) NOT NULL,
-    CONSTRAINT fk_product FOREIGN KEY (ProductID) REFERENCES Products(ProductID),
-    CONSTRAINT fk_administrator FOREIGN KEY (AdministratorID) REFERENCES Administrators(AdministratorID)
+    CONSTRAINT fk_product FOREIGN KEY (ProductID) REFERENCES MS_Products(ProductID),
+    CONSTRAINT fk_administrator FOREIGN KEY (AdministratorID) REFERENCES MS_Administrators(AdministratorID)
 );
 
 -- Create the Orders table
@@ -45,7 +45,7 @@ CREATE TABLE MS_Orders (
     TotalCost NUMBER(10,2) NOT NULL,
     DateOfOrder DATE NOT NULL,
     CustomerID NUMBER(10) NOT NULL,
-    CONSTRAINT fk_customer FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+    CONSTRAINT fk_customer FOREIGN KEY (CustomerID) REFERENCES MS_Customers(CustomerID)
 );
 
 -- Create the OrderItems table
@@ -54,8 +54,8 @@ CREATE TABLE MS_OrderItems (
     OrderID NUMBER(6) NOT NULL,
     ProductID NUMBER(6) NOT NULL,
     Quantity NUMBER(10) NOT NULL CHECK (Quantity >= 0),
-    CONSTRAINT fk_order FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
-    CONSTRAINT fk_product FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+    CONSTRAINT fk_order FOREIGN KEY (OrderID) REFERENCES MS_Orders(OrderID),
+    CONSTRAINT fk_product FOREIGN KEY (ProductID) REFERENCES MS_Products(ProductID)
 );
 
 -- Create the Payments table
@@ -65,6 +65,6 @@ CREATE TABLE MS_Payments (
     PaymentMethod VARCHAR2(20) NOT NULL,
     Price NUMBER(10,2) NOT NULL CHECK (Price >= 0),
     CustomerID NUMBER(10) NOT NULL,
-    CONSTRAINT fk_order FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
-    CONSTRAINT fk_customer FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+    CONSTRAINT fk_order FOREIGN KEY (OrderID) REFERENCES MS_Orders(OrderID),
+    CONSTRAINT fk_customer FOREIGN KEY (CustomerID) REFERENCES MS_Customers(CustomerID)
 );
