@@ -18,3 +18,15 @@ DROP TABLE MS_Products CASCADE CONSTRAINTS;
 
 -- Drop the Customers table
 DROP TABLE MS_Customers CASCADE CONSTRAINTS;
+
+-- Drop the CustomerOrderSummary view
+DROP VIEW CustomerOrderSummary;
+
+-- Drop the ProductSalesSummary view
+DROP VIEW ProductSalesSummary;
+
+-- Drop the InventoryStatus view
+DROP VIEW InventoryStatus;
+
+-- Drop the PaymentSummary view
+DROP VIEW PaymentSummary;
