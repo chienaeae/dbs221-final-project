@@ -1,7 +1,7 @@
 -- Description: This script creates the tables for the database
 
 -- Create the Customers table
-CREATE TABLE Customers (
+CREATE TABLE MS_Customers (
     CustomerID NUMBER(6) PRIMARY KEY,
     Username VARCHAR2(25) NOT NULL,
     Password VARCHAR2(25) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE Customers (
 );
 
 -- Create the Products table
-CREATE TABLE Products (
+CREATE TABLE MS_Products (
     ProductID NUMBER(6) PRIMARY KEY,
     Description VARCHAR2(255),
     Price NUMBER(7,2) NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE Products (
 );
 
 -- Create the Administrators table
-CREATE TABLE Administrators (
+CREATE TABLE MS_Administrators (
     AdministratorID NUMBER(6) PRIMARY KEY,
     Username VARCHAR2(25) NOT NULL,
     Password VARCHAR2(25) NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE Administrators (
 );
 
 -- Create the Inventory table
-CREATE TABLE Inventory (
+CREATE TABLE MS_Inventory (
     InventoryID NUMBER(6) PRIMARY KEY,
     StockNumber NUMBER(6) NOT NULL,
     ProductID NUMBER(6) NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE Inventory (
 );
 
 -- Create the Orders table
-CREATE TABLE Orders (
+CREATE TABLE MS_Orders (
     OrderID NUMBER(6) PRIMARY KEY,
     TotalCost NUMBER(10,2) NOT NULL,
     DateOfOrder DATE NOT NULL,
@@ -49,7 +49,7 @@ CREATE TABLE Orders (
 );
 
 -- Create the OrderItems table
-CREATE TABLE OrderItems (
+CREATE TABLE MS_OrderItems (
     OrderItemID NUMBER(6) PRIMARY KEY,
     OrderID NUMBER(6) NOT NULL,
     ProductID NUMBER(6) NOT NULL,
@@ -59,7 +59,7 @@ CREATE TABLE OrderItems (
 );
 
 -- Create the Payments table
-CREATE TABLE Payments (
+CREATE TABLE MS_Payments (
     PaymentID NUMBER(10) PRIMARY KEY,
     OrderID NUMBER(10) NOT NULL,
     PaymentMethod VARCHAR2(20) NOT NULL,

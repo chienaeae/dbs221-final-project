@@ -1,20 +1,20 @@
 -- Drop the Payments table
-DROP TABLE Payments CASCADE CONSTRAINTS;
+DROP TABLE MS_Payments CASCADE CONSTRAINTS;
 
 -- Drop the OrderItems table
-DROP TABLE OrderItems CASCADE CONSTRAINTS;
+DROP TABLE MS_OrderItems CASCADE CONSTRAINTS;
 
 -- Drop the Orders table
-DROP TABLE Orders CASCADE CONSTRAINTS;
+DROP TABLE MS_Orders CASCADE CONSTRAINTS;
 
 -- Drop the Inventory table
-DROP TABLE Inventory CASCADE CONSTRAINTS;
+DROP TABLE MS_Inventory CASCADE CONSTRAINTS;
 
 -- Drop the Administrators table
-DROP TABLE Administrators CASCADE CONSTRAINTS;
+DROP TABLE MS_Administrators CASCADE CONSTRAINTS;
 
 -- Drop the Products table
-DROP TABLE Products CASCADE CONSTRAINTS;
+DROP TABLE MS_Products CASCADE CONSTRAINTS;
 
 -- Drop the Customers table
-DROP TABLE Customers CASCADE CONSTRAINTS;
+DROP TABLE MS_Customers CASCADE CONSTRAINTS;

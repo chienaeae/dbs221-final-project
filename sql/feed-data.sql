@@ -1,5 +1,5 @@
 -- Insert data into Customers table
-INSERT INTO Customers (CustomerID, Username, Password, PhoneNumber, Firstname, Lastname, AddressLine) VALUES
+INSERT INTO MS_Customers (CustomerID, Username, Password, PhoneNumber, Firstname, Lastname, AddressLine) VALUES
 (1, 'user1', 'password1', '9055551212', 'John', 'Doe', '123 Elm St'),
 (2, 'user2', 'password2', '9055551213', 'Jane', 'Smith', '456 Oak St'),
 (3, 'user3', 'password3', '9055551214', 'Alice', 'Johnson', '789 Pine St'),
@@ -7,7 +7,7 @@ INSERT INTO Customers (CustomerID, Username, Password, PhoneNumber, Firstname, L
 (5, 'user5', 'password5', '9055551216', 'Charlie', 'Davis', '202 Birch St');
 
 -- Insert data into Products table
-INSERT INTO Products (ProductID, Description, Price, ImageURL, ProductName) VALUES
+INSERT INTO MS_Products (ProductID, Description, Price, ImageURL, ProductName) VALUES
 (1, 'Fresh banana', 0.99, 'http://example.com/banana.jpg', 'Banana'),
 (2, 'Fresh apple', 1.29, 'http://example.com/apple.jpg', 'Apple'),
 (3, 'Fresh orange', 1.49, 'http://example.com/orange.jpg', 'Orange'),
@@ -15,7 +15,7 @@ INSERT INTO Products (ProductID, Description, Price, ImageURL, ProductName) VALU
 (5, 'Fresh pineapple', 3.99, 'http://example.com/pineapple.jpg', 'Pineapple');
 
 -- Insert data into Administrators table
-INSERT INTO Administrators (AdministratorID, Username, Password, Email, PhoneNumber) VALUES
+INSERT INTO MS_Administrators (AdministratorID, Username, Password, Email, PhoneNumber) VALUES
 (1, 'admin1', 'adminpass1', 'admin1@mail.com', '9055551217'),
 (2, 'admin2', 'adminpass2', 'admin2@mail.com', '9055551218'),
 (3, 'admin3', 'adminpass3', 'admin3@mail.com', '9055551219'),
@@ -23,7 +23,7 @@ INSERT INTO Administrators (AdministratorID, Username, Password, Email, PhoneNum
 (5, 'admin5', 'adminpass5', 'admin5@mail.com', '9055551221');
 
 -- Insert data into Inventory table
-INSERT INTO Inventory (InventoryID, StockNumber, ProductID, AdministratorID) VALUES
+INSERT INTO MS_Inventory (InventoryID, StockNumber, ProductID, AdministratorID) VALUES
 (1, 500, 1, 1),
 (2, 300, 2, 2),
 (3, 200, 3, 3),
@@ -31,7 +31,7 @@ INSERT INTO Inventory (InventoryID, StockNumber, ProductID, AdministratorID) VAL
 (5, 100, 5, 5);
 
 -- Insert data into Orders table
-INSERT INTO Orders (OrderID, TotalCost, DateOfOrder, CustomerID) VALUES
+INSERT INTO MS_Orders (OrderID, TotalCost, DateOfOrder, CustomerID) VALUES
 (1, 20.99, TO_DATE('2023-12-31', 'YYYY-MM-DD'), 1),
 (2, 15.49, TO_DATE('2024-01-01', 'YYYY-MM-DD'), 2),
 (3, 30.99, TO_DATE('2024-01-02', 'YYYY-MM-DD'), 3),
@@ -39,7 +39,7 @@ INSERT INTO Orders (OrderID, TotalCost, DateOfOrder, CustomerID) VALUES
 (5, 10.99, TO_DATE('2024-01-04', 'YYYY-MM-DD'), 5);
 
 -- Insert data into OrderItems table
-INSERT INTO OrderItems (OrderItemID, OrderID, ProductID, Quantity) VALUES
+INSERT INTO MS_OrderItems (OrderItemID, OrderID, ProductID, Quantity) VALUES
 (1, 1, 1, 10),
 (2, 1, 2, 5),
 (3, 2, 3, 20),
@@ -47,7 +47,7 @@ INSERT INTO OrderItems (OrderItemID, OrderID, ProductID, Quantity) VALUES
 (5, 4, 5, 12);
 
 -- Insert data into Payments table
-INSERT INTO Payments (PaymentID, OrderID, PaymentMethod, Price, CustomerID) VALUES
+INSERT INTO MS_Payments (PaymentID, OrderID, PaymentMethod, Price, CustomerID) VALUES
 (1, 1, 'Credit', 20.99, 1),
 (2, 2, 'Debit', 15.49, 2),
 (3, 3, 'PayPal', 30.99, 3),
