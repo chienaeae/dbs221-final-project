@@ -24,6 +24,11 @@ GROUP BY
 
 -- View 2: Product Sales Summary
 -- This view provides a summary of sales for each product, including the total quantity sold and total revenue generated.
+/*
+The purpose of this view is to summaries the products and how many of each of them were sold. This is very important to out view because,
+this will tell us what products are in demand and which ones aren't, this will help us determine what products we should prioritise over others.
+This view will act as the basis of deciding on what products we should drop so that we can adjust accordingly to supply and demand.
+*/
 CREATE VIEW MS_ProductSalesSummary AS
 SELECT 
     p.ProductID,
@@ -54,8 +59,11 @@ FROM
 -- View 4: Payment Summary
 -- This view provides a summary of payments made, including total payment amount by each customer.
 /*
-...
-
+This view summarizes all payments made by each user by the total amount of purchases made by one individual,
+and the total amount of money that was made through their entire purchase history. The importance of this view
+cannot be understated due to the fact that this is where all the simple, but important information is held
+regarding the users and their most essential details regarding payment information. This view will help us better
+understand our users and how active they are regarding how much money they contributed towards the app.
 */
 CREATE VIEW MS_PaymentSummary AS
 SELECT 
