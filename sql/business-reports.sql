@@ -1,5 +1,11 @@
 -- View 1: Customer Order Summary
 -- This view provides a summary of orders placed by each customer, including total order count and total amount spent.
+/* 
+The Customer Order Summary report from the MS_CustomerOrderSummary view provides an overview of each customer's 
+total orders and spending. It helps our business identify those important customers and their buying patterns for targeted marketing. 
+Additionally, it aids in recognizing thier spending trends, optimizing inventory, and forecasting sales. This report is 
+crucial for enhancing customer relationship management and making informed business decisions.
+*/
 CREATE VIEW MS_CustomerOrderSummary AS
 SELECT 
     c.CustomerID,
