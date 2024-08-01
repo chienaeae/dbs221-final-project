@@ -38,7 +38,10 @@ GROUP BY
     p.ProductName;
 
 -- View 3: Inventory Status
--- This view provides the current status of the inventory, including stock levels for each product.
+/* This Ms_InventoryStatus view provides the current status of the inventory, including stock levels for each product. 
+ It is simple for company to view the data and easy for company to track inventor productivity and identify top sell products.
+ It will help company understand the invention activities, adjust strategies and drive business success.
+ */
 CREATE VIEW MS_InventoryStatus AS
 SELECT 
     i.ProductID,
