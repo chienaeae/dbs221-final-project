@@ -53,6 +53,10 @@ FROM
 
 -- View 4: Payment Summary
 -- This view provides a summary of payments made, including total payment amount by each customer.
+/*
+...
+
+*/
 CREATE VIEW MS_PaymentSummary AS
 SELECT 
     p.CustomerID,
